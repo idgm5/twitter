@@ -1,6 +1,7 @@
 <div>
-<h1><%= @userinfo.email %></h1>
-<h2>You have tweeted <%= @usercount.size %> time(s).</h2>
+  <h1><%= @userinfo.username %></h1>
+  <h3><%= @userinfo.bio %></h3>
+  <h2>You have tweeted <%= @usercount.size %> time(s).</h2>
 </div>
 
 <div>
@@ -9,7 +10,7 @@
     <p>
       <tr>
         <div  class="tweet">
-          <h3 class="black"><td><%= link_to tweet.user.email, user_profile_path(tweet.user) %></td></h3>
+          <h3 class="black"><td><%= link_to tweet.user.username, user_profile_path(tweet.user) %></td></h3>
           <h2><td><%= tweet.body %></td></h2>
           <h3><td>
             <% if current_user.liked? tweet %>
