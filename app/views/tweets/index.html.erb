@@ -7,8 +7,7 @@
   <% else %>
     <h1>See what's happening in the world right now</h1>
     <div class="welcome">
-    <h2>Join Twitter today.</h2>
-    <i class="fab fa-twitter"></i>
+    <h2 class="twitter-button homepage-button"><i class="fab fa-twitter"></i> <%= link_to 'Join Twitter', new_user_registration_path %></h2>
     </div>
   <% end %>
   <% @tweets.reverse.each do |tweet| %>

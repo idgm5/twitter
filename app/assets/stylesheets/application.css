@@ -172,12 +172,6 @@
   justify-content: center;
 }
 
-.welcome > i {
-  font-size: 40px;
-  color: #62A9E0;
-  margin-left: 10px;
-}
-
 @media (max-width: 499px) {
   .tweet {
     width: 23rem;
