@@ -1,4 +1,5 @@
 <div class="thread">
+  <%= image_tag @userinfo.gravatar_url, :class => "gravatar" %>
   <h1><%= @userinfo.realname%></h1>
   <h3 class="bio"><%= @userinfo.bio %></h3>
   <% if user_signed_in? %>
