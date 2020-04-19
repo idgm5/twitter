@@ -25,25 +25,29 @@
               <td><%= tweet.created_at.strftime('%T · %F · Twitter Web App')%></td>
             </h3>
             <hr>
-            <% if current_user.liked? tweet %>
-              <%= link_to dislike_tweet_path(tweet.id), method: :put do %>
+            <div class="bottom-tweet">
+              <% if current_user.liked? tweet %>
+                <%= link_to dislike_tweet_path(tweet.id), method: :put do %>
+                <div class="like">
+                  <%= image_tag("like.png", :alt => "Like", height: 18, width: 20) %>
+                  <%= tweet.get_likes.size %>
+                  Likes
+                </div>
+              <% end %>
+              <% else %>
+              <%= link_to like_tweet_path(tweet), method: :put do %>
               <div class="like">
-                <%= image_tag("like.png", :alt => "Like", height: 18, width: 20) %>
+                <%= image_tag("dislike.png", :alt => "Like", height: 18, width: 20) %>
                 <%= tweet.get_likes.size %>
                 Likes
               </div>
             <% end %>
-          <% else %>
-            <%= link_to like_tweet_path(tweet), method: :put do %>
-            <div class="like">
-              <%= image_tag("dislike.png", :alt => "Like", height: 18, width: 20) %>
-              <%= tweet.get_likes.size %>
-              Likes
-            </div>
           <% end %>
-        <% end %>
+          <% if current_user == tweet.user %>
+              <%= link_to "Delete Tweet", tweet_path(tweet.id), :confirm => "Are you sure?", :method => :delete, :class => 'delete'  %>
+          <% end %>
+          </div>
       </div>
     <% end %>
-    <br>
 <% end %>
 </div>

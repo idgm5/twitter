@@ -46,6 +46,7 @@
 
  a {
      text-decoration: none !important;
+     color: black;
  }
 
  input[type=submit] {
@@ -99,6 +100,10 @@
     align-items: center;
   }
 
+  .thread > h1 {
+    margin-top: 2rem;
+  }
+
   .tweet {
      background: #fff;
      border-radius: 8px;
@@ -109,6 +114,7 @@
      line-height: 20px;
      width: 50%;
      padding: 20px;
+     margin-bottom: 1rem;
  }
 
  .like {
@@ -127,10 +133,24 @@
    color: gray;
  }
 
- .bio {
-     text-align: center;
-  }
+.bio {
+   text-align: center;
+}
 
+.bottom-tweet{
+  display: flex;
+  justify-content: space-between;
+}
+
+.welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome > img {
+  width: 4%;
+}
 @media (max-width: 499px) {
   .tweet {
     width: 23rem;
@@ -142,6 +162,14 @@
 
   .navbar-link {
     display: none;
+  }
+
+  .welcome > img {
+    width: 10%;
+  }
+
+  .thread > h1 {
+    text-align: center;
   }
 }
 
