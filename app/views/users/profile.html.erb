@@ -1,6 +1,6 @@
 <div class="thread">
   <h1><%= @userinfo.realname%></h1>
-  <h3><%= @userinfo.bio %></h3>
+  <h3 class="bio"><%= @userinfo.bio %></h3>
   <% if current_user.username == @userinfo.username %>
     <h2>You have tweeted
       <%= @usercount.size %>
@@ -13,8 +13,6 @@
   <% end %>
   <% @tweets.reverse.each do |tweet| %>
     <% if @userinfo == tweet.user %>
-      <p>
-        <tr>
           <div class="tweet">
             <h3 class="black">
               <td><%= @userinfo.realname%>
@@ -45,8 +43,7 @@
           <% end %>
         <% end %>
       </div>
-    </tr>
-  </p>
-<% end %>
+    <% end %>
+    <br>
 <% end %>
 </div>

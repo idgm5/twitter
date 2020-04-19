@@ -127,6 +127,10 @@
    color: gray;
  }
 
+ .bio {
+     text-align: center;
+  }
+
 @media (max-width: 499px) {
   .tweet {
     width: 23rem;
@@ -138,5 +142,15 @@
 
   .navbar-link {
     display: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .thread {
+    font-size: 12px;
+  }
+  .tweet {
+    width: 18rem;
+    font-size: 12px;
   }
 }
