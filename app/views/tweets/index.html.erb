@@ -1,10 +1,16 @@
 <div class="thread">
-  <h1>See what's happening in the world right now</h1>
-  <div class="welcome">
-  <h2>Join Twitter today.</h2>
-  <img src="https://1000marcas.net/wp-content/uploads/2019/11/Logo-Twitter.png" alt="logo"></img>
-  </div>
-
+  <% if user_signed_in? %>
+    <h1>Welcome back <%= current_user.realname %>!</h1>
+    <div class="welcome">
+    <h2 class="twitter-button homepage-button"><i class="fab fa-twitter"></i> <%= link_to 'Tweet something', new_tweet_path(@user) %></h2>
+    </div>
+  <% else %>
+    <h1>See what's happening in the world right now</h1>
+    <div class="welcome">
+    <h2>Join Twitter today.</h2>
+    <i class="fab fa-twitter"></i>
+    </div>
+  <% end %>
   <% @tweets.reverse.each do |tweet| %>
           <div class="tweet">
             <h3 class="black">

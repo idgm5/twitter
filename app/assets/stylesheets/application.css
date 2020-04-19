@@ -40,6 +40,17 @@
      margin: 5px;
  }
 
+ .homepage-button {
+   display: flex;
+   align-items: center;
+   margin-bottom: 1.5rem;
+ }
+
+ .homepage-button > i {
+    width: 30px;
+    font-size: 20px;
+    color: white;
+ }
 .delete {
   color: black !important;
 }
@@ -148,9 +159,12 @@
   justify-content: center;
 }
 
-.welcome > img {
-  width: 4%;
+.welcome > i {
+  font-size: 40px;
+  color: #62A9E0;
+  margin-left: 10px;
 }
+
 @media (max-width: 499px) {
   .tweet {
     width: 23rem;
