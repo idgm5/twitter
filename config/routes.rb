@@ -7,4 +7,10 @@ Rails.application.routes.draw do
   resources :users do
     get 'profile'
   end
+  resources :tweets do
+    member do
+      put "like", to: "tweets#like"
+      put "dislike", to: "tweets#dislike"
+    end
+  end
 end

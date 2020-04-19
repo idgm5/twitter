@@ -18,14 +18,26 @@ class TweetsController < ApplicationController
   end
   end
 
-  private
-  def tweet_params
-    params.require(:tweet).permit(:body)
+  def like
+  @tweet = Tweet.find(params[:id])
+  @tweet.liked_by current_user
+  redirect_to '/'
+  end
+
+  def dislike
+    @tweet = Tweet.find(params[:id])
+    @tweet.disliked_by current_user
+    redirect_to '/'
   end
 
   def destroy
     @tweet = Tweet.find(params[:id])
     @tweet.destroy
     redirect_to '/', :notice => "Your tweet has been deleted"
+  end
+  
+  private
+  def tweet_params
+    params.require(:tweet).permit(:body)
   end
 end

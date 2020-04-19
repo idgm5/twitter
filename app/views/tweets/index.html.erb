@@ -3,7 +3,19 @@
     <tr>
       <h1><td><%= tweet.user.email %></td></h1>
       <h2><td><%= tweet.body %></td></h2>
-      <h3><td><%= tweet.created_at %>
+      <h3><td>
+        <% if current_user.liked? tweet %>
+           <%= link_to dislike_tweet_path(tweet.id), method: :put do %>
+              <%= image_tag("like.png", :alt => "Like", height: 18, width: 20) %>
+              <%= tweet.get_likes.size %>
+           <% end %>
+        <% else %>
+           <%= link_to like_tweet_path(tweet), method: :put do %>
+              <%= image_tag("dislike.png", :alt => "Like", height: 18, width: 20) %>
+              <%= tweet.get_likes.size %>
+           <% end %>
+        <% end %>
+        <%= tweet.created_at %>
         <% if current_user == tweet.user %>
             <%= link_to " | Delete", tweet_path(tweet.id), :confirm => "Are you sure?", :method => :delete, :class => 'delete'  %>
         <% end %>
