@@ -195,17 +195,24 @@
     width: 10%;
   }
 
+  .thread {
+    font-size: 12px;
+  }
+  
   .thread > h1 {
     text-align: center;
   }
 }
 
 @media (max-width: 380px) {
-  .thread {
-    font-size: 12px;
-  }
   .tweet {
     width: 18rem;
     font-size: 12px;
+  }
+}
+
+@media (max-width: 1025px) {
+  .tweet {
+    width: 80%;
   }
 }
