@@ -13,3 +13,97 @@
  *= require_tree .
  *= require_self
  */
+
+ @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+  body{
+  font-family: monospace, sans-serif;
+  }
+
+
+ .twitter-button{
+     background-color: #62A9E0;
+     border-color: transparent;
+     border: 1px solid #1da1f2;
+     color: #fff !important;
+     border-radius: 100px;
+     box-shadow: none;
+     cursor: pointer;
+     font-size: 14px;
+     font-weight: bold;
+     line-height: 20px;
+     padding: 8px 18px;
+     position: relative;
+     text-align: center;
+     white-space: nowrap;
+     text-decoration: none !important;
+     margin: 5px;
+ }
+
+.delete {
+  color: black !important;
+}
+
+ a {
+     text-decoration: none !important;
+     color: #fff
+ }
+
+ input[type=submit]{
+     background-color: #62A9E0;
+     border-color: transparent;
+     border: 1px solid #1da1f2;
+     color: #fff !important;
+     border-radius: 100px;
+     box-shadow: none;
+     cursor: pointer;
+     font-size: 14px;
+     font-weight: bold;
+     line-height: 20px;
+     padding: 8px 18px;
+     position: relative;
+     text-align: center;
+     white-space: nowrap;
+     text-decoration: none !important;
+     margin: 5px;
+ }
+
+ input[type=text]{
+     padding: 12px 20px;
+     margin: 8px 0;
+     /* box-sizing: border-box; */
+     width: 50%;
+     border-radius: 5px;
+     border: 2px solid #d3d3d3;
+ }
+
+ .navbar-text{
+     display: flex;
+     justify-content: space-between;
+     color: #fff;
+     background-color: #62A9E0;
+     padding: 15px;
+     margin: -10px;
+     font-size: 14px;
+     font-weight: bold;
+  }
+
+  .tweet{
+     background: #fff;
+     border-radius: 8px;
+     border: 1px solid #d3d3d3;
+     box-shadow: 3px 3px #888888;
+     color: #14171a;
+     font-size: 14px;
+     line-height: 20px;
+     width: 80%;
+     padding: 20px;
+     margin-left: 10%;
+     margin-right: 10%;
+     /* margin: 10px; */
+ }
+
+ .right {
+         float: right !important;
+
+ }
