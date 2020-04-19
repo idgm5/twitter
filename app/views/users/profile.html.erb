@@ -1,34 +1,31 @@
 <div>
   <h1><%= @userinfo.username %></h1>
   <h3><%= @userinfo.bio %></h3>
-  <h2>You have tweeted <%= @usercount.size %> time(s).</h2>
 </div>
 
-<div>
+<div class="thread">
+<h2>You have tweeted <%= @usercount.size %> time(s).</h2>
 <% @tweets.reverse.each do |tweet| %>
   <% if @userinfo == tweet.user %>
     <p>
       <tr>
         <div  class="tweet">
-          <h3 class="black"><td><%= link_to tweet.user.username, user_profile_path(tweet.user) %></td></h3>
+          <h3 class="black"><td>@<%= link_to tweet.user.username, user_profile_path(tweet.user) %></td></h3>
           <h2><td><%= tweet.body %></td></h2>
           <h3><td>
+            <%= tweet.created_at.strftime('%T · %F · Twitter Web App') %></td></h3>
+            <hr>
             <% if current_user.liked? tweet %>
                <%= link_to dislike_tweet_path(tweet.id), method: :put do %>
                   <%= image_tag("like.png", :alt => "Like", height: 18, width: 20) %>
-                  <%= tweet.get_likes.size %>
+                  <%= tweet.get_likes.size %> Likes
                <% end %>
             <% else %>
                <%= link_to like_tweet_path(tweet), method: :put do %>
                   <%= image_tag("dislike.png", :alt => "Like", height: 18, width: 20) %>
-                  <%= tweet.get_likes.size %>
+                  <%= tweet.get_likes.size %> Likes
                <% end %>
             <% end %>
-            <%= tweet.created_at %></td></h3>
-
-          <span class="twitter-button">
-            <%= link_to "Delete", tweet_path(tweet.id), :confirm => "Are you sure?", :method => :delete %>
-          </span>
         </div>
       </tr>
     </p>
