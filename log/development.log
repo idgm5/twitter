@@ -13622,3 +13622,369 @@ Processing by TweetsController#index as HTML
 Completed 200 OK in 36ms (Views: 32.7ms | ActiveRecord: 1.4ms | Allocations: 14622)
 
 
+Started GET "/tweets" for ::1 at 2020-04-19 15:51:09 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:21
+  [1m[36mActsAsVotable::Vote Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "votes" WHERE "votes"."voter_id" = ? AND "votes"."voter_type" = ? AND "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = ? LIMIT ?[0m  [["voter_id", 1], ["voter_type", "User"], ["votable_id", 8], ["votable_type", "Tweet"], ["vote_flag", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 8], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:34
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[36mActsAsVotable::Vote Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "votes" WHERE "votes"."voter_id" = ? AND "votes"."voter_type" = ? AND "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = ? LIMIT ?[0m  [["voter_id", 1], ["voter_type", "User"], ["votable_id", 7], ["votable_type", "Tweet"], ["vote_flag", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:22
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 7], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:34
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[36mActsAsVotable::Vote Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "votes" WHERE "votes"."voter_id" = ? AND "votes"."voter_type" = ? AND "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = ? LIMIT ?[0m  [["voter_id", 1], ["voter_type", "User"], ["votable_id", 4], ["votable_type", "Tweet"], ["vote_flag", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:22
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 4], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:34
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[36mActsAsVotable::Vote Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "votes" WHERE "votes"."voter_id" = ? AND "votes"."voter_type" = ? AND "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = ? LIMIT ?[0m  [["voter_id", 1], ["voter_type", "User"], ["votable_id", 3], ["votable_type", "Tweet"], ["vote_flag", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 3], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[36mActsAsVotable::Vote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "votes" WHERE "votes"."voter_id" = ? AND "votes"."voter_type" = ? AND "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = ? LIMIT ?[0m  [["voter_id", 1], ["voter_type", "User"], ["votable_id", 2], ["votable_type", "Tweet"], ["vote_flag", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:22
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 2], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:26
+  Rendered tweets/index.html.erb within layouts/application (Duration: 34.2ms | Allocations: 15116)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 38ms (Views: 34.9ms | ActiveRecord: 2.7ms | Allocations: 18693)
+
+
+Started PUT "/tweets/8/like" for ::1 at 2020-04-19 15:51:11 -0500
+Processing by TweetsController#like as HTML
+  Parameters: {"authenticity_token"=>"F8vx204GO4yh8llBpUkoH3859nEgqV9hkOGCrO31mXtmEiXmPJdiWd0m7GW4giDiy6/VRwyMoXRt2mVhJ7X/vw==", "id"=>"8"}
+Completed 500 Internal Server Error in 79ms (ActiveRecord: 0.0ms | Allocations: 47669)
+
+
+  
+NoMethodError (undefined method `before_action' for #<TweetsController:0x00007f78343d6248>):
+  
+app/controllers/tweets_controller.rb:18:in `like'
+Started PUT "/tweets/8/like" for ::1 at 2020-04-19 15:51:55 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TweetsController#like as HTML
+  Parameters: {"authenticity_token"=>"F8vx204GO4yh8llBpUkoH3859nEgqV9hkOGCrO31mXtmEiXmPJdiWd0m7GW4giDiy6/VRwyMoXRt2mVhJ7X/vw==", "id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTweet Load (0.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:18:in `like'
+  [1m[36mActsAsVotable::Vote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."voter_id" = ? AND "votes"."vote_scope" IS NULL AND "votes"."voter_type" = ? LIMIT ?[0m  [["votable_id", 8], ["votable_type", "Tweet"], ["voter_id", 1], ["voter_type", "User"], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:19:in `like'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:19:in `like'
+  [1m[36mActsAsVotable::Vote Create (0.3ms)[0m  [1m[32mINSERT INTO "votes" ("votable_type", "votable_id", "voter_type", "voter_id", "vote_flag", "vote_weight", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["votable_type", "Tweet"], ["votable_id", 8], ["voter_type", "User"], ["voter_id", 1], ["vote_flag", 1], ["vote_weight", 1], ["created_at", "2020-04-19 20:51:55.702373"], ["updated_at", "2020-04-19 20:51:55.702373"]]
+  ↳ app/controllers/tweets_controller.rb:19:in `like'
+  [1m[35m (382.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:19:in `like'
+Redirected to http://localhost:3000/
+Completed 302 Found in 405ms (ActiveRecord: 383.5ms | Allocations: 16852)
+
+
+Started GET "/" for ::1 at 2020-04-19 15:51:56 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[36mActsAsVotable::Vote Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "votes" WHERE "votes"."voter_id" = ? AND "votes"."voter_type" = ? AND "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = ? LIMIT ?[0m  [["voter_id", 1], ["voter_type", "User"], ["votable_id", 8], ["votable_type", "Tweet"], ["vote_flag", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:22
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 8], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:26
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[36mActsAsVotable::Vote Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "votes" WHERE "votes"."voter_id" = ? AND "votes"."voter_type" = ? AND "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = ? LIMIT ?[0m  [["voter_id", 1], ["voter_type", "User"], ["votable_id", 7], ["votable_type", "Tweet"], ["vote_flag", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:22
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 7], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:34
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[36mActsAsVotable::Vote Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "votes" WHERE "votes"."voter_id" = ? AND "votes"."voter_type" = ? AND "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = ? LIMIT ?[0m  [["voter_id", 1], ["voter_type", "User"], ["votable_id", 4], ["votable_type", "Tweet"], ["vote_flag", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 4], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:34
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[36mActsAsVotable::Vote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "votes" WHERE "votes"."voter_id" = ? AND "votes"."voter_type" = ? AND "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = ? LIMIT ?[0m  [["voter_id", 1], ["voter_type", "User"], ["votable_id", 3], ["votable_type", "Tweet"], ["vote_flag", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 3], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[36mActsAsVotable::Vote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "votes" WHERE "votes"."voter_id" = ? AND "votes"."voter_type" = ? AND "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = ? LIMIT ?[0m  [["voter_id", 1], ["voter_type", "User"], ["votable_id", 2], ["votable_type", "Tweet"], ["vote_flag", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:22
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 2], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:26
+  Rendered tweets/index.html.erb within layouts/application (Duration: 26.5ms | Allocations: 15545)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 28.4ms | ActiveRecord: 2.5ms | Allocations: 20537)
+
+
+Started PUT "/tweets/8/dislike" for ::1 at 2020-04-19 15:51:57 -0500
+Processing by TweetsController#dislike as HTML
+  Parameters: {"authenticity_token"=>"/azizBNC9qmhicK5r7Nwkq3BY9+3+x9G22hhLdUEEUSMdTbxYdOvfN1dd52yeHhvGVdA6Zve4VMmU4bgH0R3gA==", "id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets" WHERE "tweets"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:24:in `dislike'
+  [1m[36mActsAsVotable::Vote Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."voter_id" = ? AND "votes"."vote_scope" IS NULL AND "votes"."voter_type" = ? LIMIT ?[0m  [["votable_id", 8], ["votable_type", "Tweet"], ["voter_id", 1], ["voter_type", "User"], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:25:in `dislike'
+  [1m[36mActsAsVotable::Vote Load (0.5ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."voter_id" = ? AND "votes"."vote_scope" IS NULL AND "votes"."voter_type" = ? ORDER BY "votes"."id" DESC LIMIT ?[0m  [["votable_id", 8], ["votable_type", "Tweet"], ["voter_id", 1], ["voter_type", "User"], ["LIMIT", 1]]
+  ↳ app/controllers/tweets_controller.rb:25:in `dislike'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tweets_controller.rb:25:in `dislike'
+  [1m[36mActsAsVotable::Vote Update (0.5ms)[0m  [1m[33mUPDATE "votes" SET "updated_at" = ?, "vote_flag" = ? WHERE "votes"."id" = ?[0m  [["updated_at", "2020-04-19 20:51:57.486263"], ["vote_flag", 0], ["id", 11]]
+  ↳ app/controllers/tweets_controller.rb:25:in `dislike'
+  [1m[35m (74.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tweets_controller.rb:25:in `dislike'
+Redirected to http://localhost:3000/
+Completed 302 Found in 100ms (ActiveRecord: 76.7ms | Allocations: 6927)
+
+
+Started GET "/" for ::1 at 2020-04-19 15:51:57 -0500
+Processing by TweetsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[36mActsAsVotable::Vote Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "votes" WHERE "votes"."voter_id" = ? AND "votes"."voter_type" = ? AND "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = ? LIMIT ?[0m  [["voter_id", 1], ["voter_type", "User"], ["votable_id", 8], ["votable_type", "Tweet"], ["vote_flag", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:22
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 8], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:34
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[36mActsAsVotable::Vote Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "votes" WHERE "votes"."voter_id" = ? AND "votes"."voter_type" = ? AND "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = ? LIMIT ?[0m  [["voter_id", 1], ["voter_type", "User"], ["votable_id", 7], ["votable_type", "Tweet"], ["vote_flag", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:22
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 7], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:34
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[36mActsAsVotable::Vote Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "votes" WHERE "votes"."voter_id" = ? AND "votes"."voter_type" = ? AND "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = ? LIMIT ?[0m  [["voter_id", 1], ["voter_type", "User"], ["votable_id", 4], ["votable_type", "Tweet"], ["vote_flag", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:22
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 4], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:34
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[36mActsAsVotable::Vote Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "votes" WHERE "votes"."voter_id" = ? AND "votes"."voter_type" = ? AND "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = ? LIMIT ?[0m  [["voter_id", 1], ["voter_type", "User"], ["votable_id", 3], ["votable_type", "Tweet"], ["vote_flag", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:22
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 3], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[36mActsAsVotable::Vote Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "votes" WHERE "votes"."voter_id" = ? AND "votes"."voter_type" = ? AND "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = ? LIMIT ?[0m  [["voter_id", 1], ["voter_type", "User"], ["votable_id", 2], ["votable_type", "Tweet"], ["vote_flag", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:22
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 2], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:26
+  Rendered tweets/index.html.erb within layouts/application (Duration: 55.0ms | Allocations: 14290)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 68ms (Views: 56.4ms | ActiveRecord: 4.7ms | Allocations: 19344)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-04-19 15:52:01 -0500
+Processing by TweetsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 300)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-04-19 15:52:01 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 1.2ms | Allocations: 518)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1848)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.0ms | Allocations: 6726)
+
+
+Started GET "/" for ::1 at 2020-04-19 15:52:16 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:21
+  [1m[36mActsAsVotable::Vote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "votes" WHERE "votes"."voter_id" = ? AND "votes"."voter_type" = ? AND "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = ? LIMIT ?[0m  [["voter_id", 1], ["voter_type", "User"], ["votable_id", 8], ["votable_type", "Tweet"], ["vote_flag", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:22
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 8], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:34
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[36mActsAsVotable::Vote Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "votes" WHERE "votes"."voter_id" = ? AND "votes"."voter_type" = ? AND "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = ? LIMIT ?[0m  [["voter_id", 1], ["voter_type", "User"], ["votable_id", 7], ["votable_type", "Tweet"], ["vote_flag", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:22
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 7], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:34
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[36mActsAsVotable::Vote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "votes" WHERE "votes"."voter_id" = ? AND "votes"."voter_type" = ? AND "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = ? LIMIT ?[0m  [["voter_id", 1], ["voter_type", "User"], ["votable_id", 4], ["votable_type", "Tweet"], ["vote_flag", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:22
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 4], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:34
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[36mActsAsVotable::Vote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "votes" WHERE "votes"."voter_id" = ? AND "votes"."voter_type" = ? AND "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = ? LIMIT ?[0m  [["voter_id", 1], ["voter_type", "User"], ["votable_id", 3], ["votable_type", "Tweet"], ["vote_flag", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:22
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 3], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:26
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[36mActsAsVotable::Vote Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "votes" WHERE "votes"."voter_id" = ? AND "votes"."voter_type" = ? AND "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_scope" IS NULL AND "votes"."vote_flag" = ? LIMIT ?[0m  [["voter_id", 1], ["voter_type", "User"], ["votable_id", 2], ["votable_type", "Tweet"], ["vote_flag", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:22
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 2], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:26
+  Rendered tweets/index.html.erb within layouts/application (Duration: 34.8ms | Allocations: 24887)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 37.0ms | ActiveRecord: 2.4ms | Allocations: 30127)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-04-19 15:52:20 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.3ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 8], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:45
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 7], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:45
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 4], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:45
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 3], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:45
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 2], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:45
+  Rendered tweets/index.html.erb within layouts/application (Duration: 27.6ms | Allocations: 10039)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 30.4ms | ActiveRecord: 1.9ms | Allocations: 13437)
+
+
+Started GET "/users/2/profile" for 127.0.0.1 at 2020-04-19 15:52:24 -0500
+Processing by UsersController#profile as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `profile'
+  Rendering users/profile.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "tweets" WHERE "tweets"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/users/profile.html.erb:18
+  [1m[36mTweet Load (0.2ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/users/profile.html.erb:21
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:22
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 8], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/users/profile.html.erb:60
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/profile.html.erb:22
+  Rendered users/profile.html.erb within layouts/application (Duration: 22.2ms | Allocations: 6029)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 30.2ms | ActiveRecord: 1.6ms | Allocations: 10578)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-04-19 15:52:27 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 8], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:45
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 7], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:45
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 4], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:45
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 3], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:45
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 2], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:45
+  Rendered tweets/index.html.erb within layouts/application (Duration: 40.0ms | Allocations: 10029)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 50ms (Views: 44.2ms | ActiveRecord: 5.5ms | Allocations: 13425)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-04-19 15:52:47 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (Duration: 0.2ms | Allocations: 134)
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1085)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 5096)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-04-19 15:52:50 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /home/isaac/.rvm/gems/ruby-2.7.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 196)
+  Rendered users/shared/_links.html.erb (Duration: 0.3ms | Allocations: 111)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 2502)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 6934)
+
+
+Started GET "/tweets" for 127.0.0.1 at 2020-04-19 15:52:55 -0500
+Processing by TweetsController#index as HTML
+  Rendering tweets/index.html.erb within layouts/application
+  [1m[36mTweet Load (0.1ms)[0m  [1m[34mSELECT "tweets".* FROM "tweets"[0m
+  ↳ app/views/tweets/index.html.erb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 8], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:45
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 7], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:45
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 4], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:45
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 3], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:45
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/tweets/index.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = ? AND "votes"."votable_type" = ? AND "votes"."vote_flag" = ?[0m  [["votable_id", 2], ["votable_type", "Tweet"], ["vote_flag", 1]]
+  ↳ app/views/tweets/index.html.erb:45
+  Rendered tweets/index.html.erb within layouts/application (Duration: 19.2ms | Allocations: 10058)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 22.5ms | ActiveRecord: 1.1ms | Allocations: 13461)
+
+
