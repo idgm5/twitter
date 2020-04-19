@@ -111,6 +111,14 @@
      padding: 20px;
  }
 
+ .like {
+   display: flex;
+ }
+
+ .like > img {
+   padding: 0px 5px 0px 0px;
+ }
+
  .right {
          float: right !important;
 
