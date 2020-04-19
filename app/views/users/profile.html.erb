@@ -2,38 +2,51 @@
   <h1><%= @userinfo.realname%></h1>
   <h3><%= @userinfo.bio %></h3>
   <% if current_user.username == @userinfo.username %>
-    <h2>You have tweeted <%= @usercount.size %> time(s).</h2>
+    <h2>You have tweeted
+      <%= @usercount.size %>
+      time(s).</h2>
   <% else %>
-    <h2>@<%= @userinfo.username %> tweeted <%= @usercount.size %> time(s).</h2>
+    <h2>@<%= @userinfo.username %>
+      tweeted
+      <%= @usercount.size %>
+      time(s).</h2>
   <% end %>
-<% @tweets.reverse.each do |tweet| %>
-  <% if @userinfo == tweet.user %>
-    <p>
-      <tr>
-        <div  class="tweet">
-          <h3 class="black"><td><%= @userinfo.realname%> @<%= @userinfo.username%></td></h3>
-          <h2><td><%= tweet.body %></td></h2>
-          <h3><td>
-            <%= tweet.created_at.strftime('%T · %F · Twitter Web App') %></td></h3>
+  <% @tweets.reverse.each do |tweet| %>
+    <% if @userinfo == tweet.user %>
+      <p>
+        <tr>
+          <div class="tweet">
+            <h3 class="black">
+              <td><%= @userinfo.realname%>
+                @<%= @userinfo.username%></td>
+            </h3>
+            <h2>
+              <td><%= tweet.body %></td>
+            </h2>
+            <h3 class="date-time">
+              <td><%= tweet.created_at.strftime('%T · %F · Twitter Web App')%></td>
+            </h3>
             <hr>
             <% if current_user.liked? tweet %>
-               <%= link_to dislike_tweet_path(tweet.id), method: :put do %>
-                <div class="like">
-                  <%= image_tag("like.png", :alt => "Like", height: 18, width: 20) %>
-                  <%= tweet.get_likes.size %> Likes
-                </div>
-               <% end %>
-            <% else %>
-               <%= link_to like_tweet_path(tweet), method: :put do %>
-                <div class="like">
-                  <%= image_tag("dislike.png", :alt => "Like", height: 18, width: 20) %>
-                  <%= tweet.get_likes.size %> Likes
-                </div>
-               <% end %>
+              <%= link_to dislike_tweet_path(tweet.id), method: :put do %>
+              <div class="like">
+                <%= image_tag("like.png", :alt => "Like", height: 18, width: 20) %>
+                <%= tweet.get_likes.size %>
+                Likes
+              </div>
             <% end %>
-        </div>
-      </tr>
-    </p>
-  <% end %>
+          <% else %>
+            <%= link_to like_tweet_path(tweet), method: :put do %>
+            <div class="like">
+              <%= image_tag("dislike.png", :alt => "Like", height: 18, width: 20) %>
+              <%= tweet.get_likes.size %>
+              Likes
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </tr>
+  </p>
+<% end %>
 <% end %>
 </div>

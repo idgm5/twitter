@@ -107,7 +107,7 @@
      color: #14171a;
      font-size: 14px;
      line-height: 20px;
-     width: 40%;
+     width: 50%;
      padding: 20px;
  }
 
@@ -121,5 +121,22 @@
 
  .right {
          float: right !important;
-
  }
+
+ .date-time {
+   color: gray;
+ }
+
+@media (max-width: 499px) {
+  .tweet {
+    width: 23rem;
+    padding: 10px;
+  }
+  .date-time {
+    font-size: 10px;
+  }
+
+  .navbar-link {
+    display: none;
+  }
+}
