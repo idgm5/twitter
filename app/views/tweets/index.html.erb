@@ -1,0 +1,14 @@
+<div>
+  <% @tweets.reverse.each do |tweet| %>
+    <tr>
+      <h1><td><%= tweet.user.email %></td></h1>
+      <h2><td><%= tweet.body %></td></h2>
+      <h3><td><%= tweet.created_at %></td></h3>
+    </tr>
+    <% if current_user == tweet.user %>
+        <%= link_to "Delete", tweet_path(tweet.id), :confirm => "Are you sure?", :method => :delete %>
+    <% end %>
+  <% end %>
+</div>
+
+<%= link_to 'New Tweet', new_tweet_path(@user) %>
