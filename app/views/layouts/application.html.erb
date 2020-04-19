@@ -21,6 +21,7 @@
         <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
       <% end %>
     </p>
+    <%= link_to 'My profile', user_profile_path(current_user.id), :class => 'navbar-link' %>
     <%= yield %>
   </body>
 </html>

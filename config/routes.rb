@@ -5,5 +5,6 @@ Rails.application.routes.draw do
 
   resources :tweets
   resources :users do
+    get 'profile'
   end
 end
