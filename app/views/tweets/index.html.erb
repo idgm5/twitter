@@ -8,7 +8,7 @@
   <% @tweets.reverse.each do |tweet| %>
           <div class="tweet">
             <h3 class="black">
-              <td><%= link_to tweet.user.username, user_profile_path(tweet.user) %></td>
+              <td><%= link_to tweet.user.realname, user_profile_path(tweet.user) %> @<%= link_to tweet.user.username, user_profile_path(tweet.user) %></td>
             </h3>
             <h2>
               <td><%= tweet.body %></td>
@@ -18,25 +18,33 @@
             </h3>
             <hr>
             <div class="bottom-tweet">
+            <% if user_signed_in? %>
               <% if current_user.liked? tweet %>
-                <%= link_to dislike_tweet_path(tweet.id), method: :put do %>
+                  <%= link_to dislike_tweet_path(tweet.id), method: :put do %>
+                  <div class="like">
+                    <%= image_tag("like.png", :alt => "Like", height: 18, width: 20) %>
+                    <%= tweet.get_likes.size %>
+                    Likes
+                  </div>
+                <% end %>
+                <% else %>
+                <%= link_to like_tweet_path(tweet), method: :put do %>
                 <div class="like">
-                  <%= image_tag("like.png", :alt => "Like", height: 18, width: 20) %>
+                  <%= image_tag("dislike.png", :alt => "Like", height: 18, width: 20) %>
                   <%= tweet.get_likes.size %>
                   Likes
                 </div>
               <% end %>
-              <% else %>
-              <%= link_to like_tweet_path(tweet), method: :put do %>
-              <div class="like">
-                <%= image_tag("dislike.png", :alt => "Like", height: 18, width: 20) %>
-                <%= tweet.get_likes.size %>
-                Likes
-              </div>
-            <% end %>
-          <% end %>
-          <% if current_user == tweet.user %>
-              <%= link_to "Delete Tweet", tweet_path(tweet.id), :confirm => "Are you sure?", :method => :delete, :class => 'delete'  %>
+             <% end %>
+             <% if current_user == tweet.user %>
+                  <%= link_to "Delete Tweet", tweet_path(tweet.id), :confirm => "Are you sure?", :method => :delete, :class => 'delete'  %>
+             <% end %>
+          <% else %>
+          <div class="like">
+            <%= image_tag("dislike.png", :alt => "Like", height: 18, width: 20) %>
+            <%= tweet.get_likes.size %>
+            Likes
+          </div>
           <% end %>
           </div>
       </div>
