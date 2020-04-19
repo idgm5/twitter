@@ -9,6 +9,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/8e996abce9.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
 
   <body>
@@ -29,4 +30,16 @@
     <%= yield %>
 
   </body>
+  <script>
+      $(document).ready(function() {
+        var review_text = $("#body");
+        var counter     = $("#counter");
+        var max_length  = counter.data("maximum-length");
+
+        review_text.keyup(function() {
+            counter.text(max_length - $(this).val().length);
+        });
+
+      });
+  </script>
 </html>

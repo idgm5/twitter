@@ -1,3 +1,4 @@
+<div class="thread">
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -17,7 +18,7 @@
    <%= f.label :realname %><br />
    <%= f.text_field :realname, autocomplete: "username" %>
   </div>
-  
+
    <div class="field">
     <%= f.label :bio %><br />
     <%= f.text_field :bio, autocomplete: "bio" %>
@@ -42,3 +43,4 @@
 <% end %>
 
 <%= render "users/shared/links" %>
+</div>

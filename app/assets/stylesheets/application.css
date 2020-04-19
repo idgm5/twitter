@@ -61,29 +61,35 @@
  }
 
  input[type=submit] {
-     background-color: #62A9E0;
-     border-color: transparent;
-     border: 1px solid #1da1f2;
-     color: #fff !important;
-     border-radius: 100px;
-     box-shadow: none;
-     cursor: pointer;
-     font-size: 14px;
-     font-weight: bold;
-     line-height: 20px;
-     padding: 8px 18px;
-     position: relative;
-     text-align: center;
-     white-space: nowrap;
-     text-decoration: none !important;
-     margin: 5px;
+    background-color: #62A9E0;
+    border-color: transparent;
+    border: 1px solid #1da1f2;
+    color: #fff !important;
+    border-radius: 3px;
+    box-shadow: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    padding: 8px 70px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none !important;
+    margin: 5px;
+    text-transform: uppercase;
  }
 
- input[type=text] {
+ .actions {
+   text-align: center;
+ }
+
+ input[type=text],
+ input[type=email],
+ input[type=password] {
      padding: 12px 20px;
      margin: 8px 0;
-     /* box-sizing: border-box; */
-     width: 50%;
+     width: 100%;
      border-radius: 5px;
      border: 2px solid #d3d3d3;
  }
@@ -103,6 +109,13 @@
   .twitter-button > a,
   .navbar-text > span > a {
     color: #fff !important
+  }
+
+  .tweet-body {
+    width: 300px !important;
+    height: 100px;
+    resize: none;
+    padding: 10px;
   }
 
   .thread {

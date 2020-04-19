@@ -11,10 +11,9 @@
     </div>
   <% end %>
 
-  <p>
-    <%= form.label :body%>
-    <br>
-    <%= form.text_field :body, :id => 'body'  %>
+  <p style="display: flex; flex-direction: column">
+    <p>Chars left: <span id="counter" data-maximum-length="<%= @maximum_length %>"><%= @maximum_length %></span></p>
+    <%= form.text_area :body, maxlength: @maximum_length, placeholder: "What is happening?", :id => 'body', :class => 'tweet-body'%>
   </p>
 
   <div class="actions">
