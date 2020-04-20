@@ -44,3 +44,7 @@ Feel free to submit a new suggestion in [issues page](issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+I followed [Commonlounge Tutorials](https://www.commonlounge.com/discussion/28faf098e31a48a0b0cca47087ac0f23) for the bare bones features, a tutorial created by [Anant Jain](https://www.commonlounge.com/profile/84ada5b390f943148c141b30d0acc91a).
