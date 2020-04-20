@@ -3,6 +3,9 @@
 
 ![screenshot](twitter_1_0.png)
 
+## Live demo
+[Hosted on Heroku](https://idgm-twitter.herokuapp.com/)
+
 ## Twitter 1.0 - Includes
 - Account Manager with Devise.
 - Profile pictures with Gravatar.
